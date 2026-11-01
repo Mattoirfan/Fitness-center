@@ -1,0 +1,1045 @@
+# MASTER PROMPT: BUILD A PREMIUM, FULLY FUNCTIONAL GYM & FITNESS CLUB WEBSITE
+
+Act as a world-class UI/UX designer, fitness-industry consultant, senior full-stack engineer, backend architect, SEO specialist, and conversion-rate optimization expert.
+
+Your task is to research, design, and build a complete, production-ready, visually stunning Gym & Fitness Center website. This must be a real, multi-page, fully connected web application—not merely a landing page, static template, or collection of non-functional UI screens.
+
+The website should be suitable for a premium fitness brand serving customers in India and internationally. It must look professional enough to demonstrate to prospective gym owners as a client-ready project.
+
+Use the working brand name **VOLT FITNESS CLUB**. Create a distinctive visual identity, an original logo, compelling fitness imagery, realistic sample content, functional membership purchasing flows, secure backend functionality, and a polished admin dashboard.
+
+Do not stop after generating a homepage. Build the complete application, connect every page, implement the core user journeys, test the result, and provide clear setup instructions.
+
+---
+
+## 1. DESIGN DIRECTION AND VISUAL IDENTITY
+
+Create an energetic, premium, contemporary fitness brand with a strong visual identity.
+
+### Color palette
+
+Use a sophisticated, high-contrast color system:
+
+- Deep charcoal: `#101114` — primary dark backgrounds.
+- Graphite: `#1C1F24` — cards and secondary surfaces.
+- Electric lime: `#C7FF3D` — primary accent and important calls to action.
+- Vibrant orange: `#FF6B35` — selected highlights and promotional details.
+- Clean white: `#FFFFFF` — headings and light surfaces.
+- Cool gray: `#A7ADB7` — secondary text.
+- Soft off-white: `#F5F6F2` — selected light sections and forms.
+
+Use colors with intention. The website must feel athletic, premium, confident, modern, and visually engaging—not plain, generic, or overly colorful.
+
+Maintain sufficient contrast and accessible text colors. Use lime and orange selectively rather than coloring every component.
+
+### Typography
+
+Choose a strong modern sans-serif font such as Inter, Manrope, or Plus Jakarta Sans.
+
+- Large, bold, impactful hero headings.
+- Clear section headings and readable body text.
+- Consistent font weights and line heights.
+- Proper spacing between words, sentences, labels, buttons, and sections.
+- Use uppercase typography only for suitable labels and short decorative text.
+- Prevent clipped text, overlapping letters, and awkward word wrapping.
+
+### Layout and visual components
+
+Create a premium design system featuring:
+
+- Large editorial hero sections.
+- High-quality gym photography.
+- Asymmetric image-and-text layouts.
+- Modern membership pricing cards.
+- Trainer profile cards.
+- Class schedule components.
+- Workout and facility galleries.
+- Subtle gradients, borders, shadows, and carefully controlled animations.
+- Smooth hover states and polished micro-interactions.
+- Consistent border radii, spacing, icon styles, and container widths.
+- Sticky navigation that does not cover page content.
+- Clear calls to action throughout the site.
+
+Avoid generic template styling, excessive rounded cards, unnecessary glassmorphism, excessive animations, and repetitive sections.
+
+Create a custom SVG logo for VOLT FITNESS CLUB, including a suitable fitness-inspired symbol and wordmark. Use the logo consistently across the header, footer, authentication pages, and dashboard.
+
+---
+
+## 2. CRITICAL REQUIREMENT: HEADER NAVIGATION MUST STAY ON ONE HORIZONTAL LINE
+
+This requirement is mandatory and must be implemented, not merely described.
+
+On desktop and laptop screens, the complete header navigation must remain properly aligned in a single horizontal row.
+
+Example:
+
+`[VOLT LOGO]  Home  About Us  Facilities  Classes  Personal Training  Memberships  Trainers  Contact  [Join Now]`
+
+Every navigation label must remain on one line.
+
+**Never allow a label such as “About Us,” “Personal Training,” or “Membership Plans” to break into two lines.**
+
+For example, this is incorrect:
+
+About  
+Us
+
+This is correct:
+
+About Us
+
+Implement all of the following:
+
+1. Use a well-structured flex layout for the header.
+2. Apply `display: flex`, `align-items: center`, and appropriate `flex-wrap: nowrap` behavior for the desktop navigation.
+3. Apply `white-space: nowrap` to individual navigation labels.
+4. Use `flex-shrink: 0` where necessary for the logo, navigation labels, and important header controls.
+5. Set consistent horizontal gaps between navigation items.
+6. Balance left and right padding, header height, margins, and vertical alignment.
+7. Prevent navigation items from colliding with the logo or the Join Now button.
+8. Avoid excessive spacing that pushes the navigation beyond the viewport.
+9. Use a suitable responsive breakpoint. When all items no longer fit, switch to a proper mobile/tablet menu rather than wrapping desktop navigation onto multiple lines.
+10. If necessary, use a compact desktop navigation, reduce nonessential gaps within sensible limits, or move secondary links into a dropdown.
+11. Keep the logo, navigation, and primary CTA vertically centered.
+12. Ensure the header works at common widths such as 1280px, 1366px, 1440px, and 1920px.
+13. Test at intermediate widths as well, not only at standard desktop sizes.
+14. Ensure the header never creates horizontal page scrolling.
+15. Ensure the sticky header works correctly while scrolling.
+
+On mobile, use a clean hamburger menu or accessible slide-out navigation. Navigation items may be stacked vertically inside the mobile menu, but the desktop header must not become a multi-line navigation bar.
+
+Apply the same no-overlap and proper-spacing principles to buttons, pricing labels, form fields, section headings, footer columns, and membership details.
+
+Create a reusable header component so every public page uses the same consistent navigation.
+
+---
+
+## 3. WEBSITE ARCHITECTURE: BUILD ALL REQUIRED PAGES
+
+Create separate, meaningful pages with proper routing and working internal links.
+
+Use the following page structure.
+
+### Page 1: Home
+
+Route: `/`
+
+Build an outstanding homepage with:
+
+- Premium hero section featuring a striking gym image or short background video.
+- Headline: “Stronger Every Day.”
+- Supporting copy explaining the club’s approach to strength, fitness, health, and community.
+- Primary CTA: “Explore Memberships.”
+- Secondary CTA: “Book a Free Trial.”
+- A clear location or gym branch selector if multiple branches are enabled.
+- Statistics such as training areas, classes, or trainers, using realistic sample values clearly marked as demo content.
+- Featured facilities.
+- Popular fitness classes.
+- Personal training highlights.
+- Membership plan preview.
+- Trainer spotlight section.
+- A beginner-friendly “Start Your Fitness Journey” section.
+- Customer testimonials clearly identified as sample content until genuine reviews are supplied.
+- Before-and-after transformation content only when authentic, authorized, and appropriately consented material is available.
+- Opening hours and location information.
+- An interactive map or map link when a real address is configured.
+- Frequently asked questions.
+- Newsletter or fitness updates signup.
+- A final prominent membership CTA.
+
+Every homepage CTA must lead to the appropriate page or functional action.
+
+### Page 2: About Us
+
+Route: `/about`
+
+Include:
+
+- Brand story.
+- Mission, vision, and fitness philosophy.
+- Training principles.
+- Gym culture and community.
+- Facility highlights.
+- Trainer qualifications and professional standards.
+- A real team section using approved staff profiles.
+- Gallery of the club.
+- Why members choose the club.
+- CTA to explore facilities or memberships.
+
+Do not invent awards, certifications, partnerships, or historical achievements. Use clearly identified placeholders until verified information is available.
+
+### Page 3: Facilities
+
+Route: `/facilities`
+
+Show facilities through a premium image gallery and descriptive sections.
+
+Include configurable facility categories such as:
+
+- Strength training zone.
+- Free weights and dumbbells.
+- Resistance machines.
+- Cardio equipment.
+- Functional training area.
+- HIIT and conditioning zone.
+- Stretching and mobility area.
+- Group exercise studio.
+- Personal training area.
+- Locker rooms and showers.
+- Drinking water stations.
+- Secure storage or lockers.
+- Parking information.
+- Accessibility information.
+- Recovery facilities such as a sauna or recovery zone, only if the gym actually offers them.
+
+Provide facility detail views or meaningful links where useful.
+
+Never advertise a facility as available unless the administrator has confirmed it.
+
+### Page 4: Classes and Group Training
+
+Route: `/classes`
+
+Create a class discovery and booking experience.
+
+Possible class categories:
+
+- Strength and conditioning.
+- HIIT.
+- Functional fitness.
+- Yoga.
+- Pilates.
+- Mobility and stretching.
+- Indoor cycling.
+- Dance fitness.
+- Boxing-inspired fitness.
+- Core training.
+- Beginner fitness.
+- Senior-friendly exercise.
+- Sports conditioning.
+
+Each class should have:
+
+- Name and category.
+- Image.
+- Description.
+- Difficulty level.
+- Duration.
+- Trainer.
+- Schedule.
+- Location or studio.
+- Available capacity.
+- Membership eligibility.
+- Booking status.
+- Cancellation policy.
+- “View Details” and “Book Class” buttons.
+
+Only show classes enabled by the gym administrator.
+
+Create a functional weekly schedule with filters for class type, trainer, day, and availability. Prevent users from booking a full class and prevent duplicate bookings.
+
+### Page 5: Personal Training
+
+Route: `/personal-training`
+
+Include:
+
+- Introduction to one-to-one coaching.
+- Personal training benefits.
+- Goal-based training options.
+- Strength and muscle-building coaching.
+- General fitness and conditioning.
+- Mobility and movement coaching.
+- Weight-management support.
+- Sports-performance coaching.
+- Beginner onboarding.
+- Trainer profiles.
+- Training package options.
+- Consultation booking.
+- FAQs.
+
+Do not promise guaranteed weight loss, muscle gain, or medical outcomes.
+
+Personal training packages and their prices must be editable through the admin dashboard.
+
+### Page 6: Trainers
+
+Route: `/trainers`
+
+Create a searchable trainer directory.
+
+Each trainer profile should support:
+
+- Name and approved photograph.
+- Professional biography.
+- Qualifications and certifications, once verified.
+- Areas of expertise.
+- Languages spoken.
+- Training approach.
+- Available consultation slots.
+- Relevant class schedule.
+- Personal training packages.
+- “View Profile” and “Book a Session” actions.
+
+Create individual trainer detail routes, such as `/trainers/[slug]`.
+
+Use clearly labeled demo trainers until the real gym team is supplied.
+
+### Page 7: Membership Plans
+
+Route: `/membership`
+
+Design an attractive, comparison-based membership page.
+
+Offer the following example plans as editable demo pricing. Use INR as the default currency for the Indian market.
+
+**STARTER — ₹999/month**
+
+- Access to the standard gym floor.
+- Basic equipment orientation.
+- Standard locker access, if available.
+- Member account and basic booking features.
+- Clearly specified access hours and exclusions.
+
+**FIT — ₹1,999/month**
+
+- Standard gym access.
+- Eligible group fitness classes.
+- Initial fitness orientation.
+- Progress tracking features.
+- Member booking access.
+- Any additional benefits that the gym actually provides.
+
+**ELITE — ₹3,499/month**
+
+- Gym access.
+- Eligible premium group classes.
+- A configurable number of personal training sessions.
+- Periodic fitness consultations.
+- Priority booking, where supported.
+- Additional benefits enabled by the administrator.
+
+**ANNUAL MEMBERSHIP — ₹19,999/year**
+
+- Annual membership access according to the selected package.
+- Clearly stated billing period and validity.
+- Any included benefits and restrictions.
+- Renewal and cancellation terms.
+
+These are illustrative demo prices, not market research claims. Make all amounts, billing periods, benefits, taxes, discounts, and eligibility rules configurable in the admin panel.
+
+Support optional membership variations:
+
+- Monthly membership.
+- Quarterly membership.
+- Half-yearly membership.
+- Annual membership.
+- Student membership, if offered.
+- Couple or family membership, if offered.
+- Corporate membership, if offered.
+- Off-peak membership, if offered.
+- Day pass or trial pass.
+- Personal training add-ons.
+
+For each plan, clearly display:
+
+- Price and currency.
+- Billing frequency.
+- Membership duration.
+- Included benefits.
+- Exclusions and restrictions.
+- Renewal rules.
+- Cancellation and refund terms.
+- Trial eligibility.
+- “Choose Plan” CTA.
+
+Include a comparison table, FAQs, transparent terms, and a plan recommendation section.
+
+Do not preselect paid add-ons, conceal recurring billing, or use deceptive checkout patterns.
+
+### Page 8: Free Trial and Consultation
+
+Route: `/free-trial`
+
+Create a dedicated conversion-focused page with:
+
+- Trial or consultation details.
+- Available branches.
+- Date picker.
+- Available time slots.
+- Optional trainer preference.
+- Contact information form.
+- Fitness goal selection.
+- Relevant consent and privacy notice.
+- Booking confirmation.
+- Cancellation or rescheduling instructions.
+
+If a free trial requires eligibility checks, clearly explain them.
+
+Use a genuine availability system backed by the database. Never show fabricated live availability.
+
+### Page 9: Schedule and Booking
+
+Route: `/schedule`
+
+Build a calendar and appointment-booking interface for classes, personal training, and consultations.
+
+Requirements:
+
+- Day and week views.
+- Date and time filters.
+- Trainer and class filters.
+- Available seat counts.
+- Booking and cancellation workflows.
+- Booking confirmation.
+- Waitlist support if enabled.
+- Time-zone-aware scheduling.
+- Prevention of overlapping or duplicate bookings.
+- Capacity enforcement.
+- Appropriate handling of expired or unavailable slots.
+
+All booking changes must be validated on the server.
+
+### Page 10: Contact and Locations
+
+Route: `/contact`
+
+Include:
+
+- Contact form.
+- Phone number.
+- Business email.
+- Opening hours.
+- Address and map.
+- Directions link.
+- Social media links.
+- Branch details.
+- FAQs.
+- Emergency contact guidance where relevant.
+
+Use configurable business information and placeholders until verified details are provided.
+
+Validate forms on the client and server, protect against spam, and show clear success and error states.
+
+### Page 11: Customer Registration and Login
+
+Routes:
+
+- `/register`
+- `/login`
+- `/forgot-password`
+- `/reset-password`
+
+Implement secure authentication with:
+
+- Email and password registration.
+- Email verification.
+- Secure login and logout.
+- Password reset.
+- Appropriate password policy.
+- Optional social login if configured.
+- Secure session management.
+- Server-side authorization checks.
+- Friendly validation messages.
+- Rate limiting for sensitive authentication endpoints.
+
+Do not store plaintext passwords or expose secrets in client-side code.
+
+### Page 12: Customer Dashboard
+
+Route: `/account`
+
+Require authentication.
+
+Include:
+
+- Profile management.
+- Active membership.
+- Membership expiry.
+- Billing history.
+- Payment status.
+- Renewal controls.
+- Upcoming classes.
+- Personal training appointments.
+- Booking cancellation and rescheduling where allowed.
+- Waitlist status.
+- Fitness goals and self-reported progress.
+- Workout plans where included.
+- Membership upgrade or downgrade workflow.
+- Support requests.
+- Privacy and account settings.
+
+Only show information belonging to the authenticated customer.
+
+Fitness-related information must be treated as sensitive personal data. Collect only what is necessary, explain how it is used, and provide appropriate consent and deletion processes.
+
+### Page 13: Checkout and Payments
+
+Routes:
+
+- `/checkout`
+- `/payment/success`
+- `/payment/cancelled`
+
+Integrate a suitable payment provider, such as Razorpay for India and/or Stripe for supported international markets.
+
+Implement:
+
+- Membership selection.
+- Order summary.
+- Taxes and discounts where applicable.
+- Secure payment initiation.
+- Server-side order creation.
+- Verified payment webhooks.
+- Duplicate-payment protection.
+- Payment status handling.
+- Successful and failed payment screens.
+- Receipts and transaction records.
+- Refund workflows where supported.
+- Clear recurring-payment consent for subscriptions.
+- Renewal and cancellation management.
+
+Never trust a client-side success message as proof of payment. Verify payments through the provider’s server-side mechanisms and signed webhooks.
+
+Do not store raw card details. Use provider-hosted or tokenized payment components.
+
+If payment credentials are unavailable, provide a clearly labeled test-mode integration and setup instructions. Do not pretend a live payment has been completed.
+
+### Page 14: Workout and Fitness Resources
+
+Route: `/fitness-resources`
+
+Build a content section for:
+
+- Beginner workout guides.
+- Strength-training education.
+- Mobility and stretching.
+- Recovery and rest.
+- Fitness habit building.
+- General nutrition education.
+- Fitness FAQs.
+- Articles and updates.
+
+Create article detail routes such as `/fitness-resources/[slug]`.
+
+Include search, categories, author attribution, publication dates, and relevant internal links.
+
+Clearly distinguish general educational content from individualized medical advice. Avoid unsafe training prescriptions and unsupported health claims.
+
+### Page 15: FAQ
+
+Route: `/faq`
+
+Include searchable FAQs about:
+
+- Membership plans.
+- Trial sessions.
+- Gym opening hours.
+- Booking and cancellations.
+- Personal training.
+- Payment methods.
+- Membership renewal.
+- Refund policies.
+- Facilities.
+- Beginner onboarding.
+- Age requirements.
+- Accessibility.
+- Privacy and account management.
+
+Answers must match the gym’s actual policies. Make FAQ content editable through the admin panel.
+
+### Page 16: Admin Dashboard
+
+Route: `/admin`
+
+Build a secure administrative interface restricted to authorized staff.
+
+Include:
+
+- Overview dashboard.
+- Membership and subscription management.
+- Customer management.
+- Trainer management.
+- Class and schedule management.
+- Appointment management.
+- Facility and branch management.
+- Pricing and promotional offers.
+- Payment and refund records.
+- Discount codes.
+- Waitlist management.
+- Website content and image management.
+- Blog and resource management.
+- Contact form submissions.
+- Newsletter subscribers.
+- Review moderation.
+- Opening hours and holiday settings.
+- Reports and analytics.
+- Role and permission management.
+- Audit logs.
+
+Administrators should be able to create, edit, publish, archive, and remove appropriate records through validated workflows.
+
+Use role-based permissions, such as owner, manager, front-desk staff, and trainer, with access limited to the functions each role needs.
+
+Never expose administrative controls to ordinary customers.
+
+### Page 17: Legal and Policy Pages
+
+Create:
+
+- `/privacy-policy`
+- `/terms-and-conditions`
+- `/membership-terms`
+- `/cancellation-policy`
+- `/refund-policy`
+- `/cookie-policy`
+
+Use editable policy templates that require review and customization for the gym’s location, actual practices, payment setup, and applicable law.
+
+Do not present generated legal copy as a substitute for professional legal review.
+
+---
+
+## 4. MEMBERSHIP AND BUSINESS LOGIC
+
+Implement the actual workflows behind the website.
+
+The system must support:
+
+1. Membership creation and management.
+2. Monthly and annual memberships.
+3. One-time purchases and recurring subscriptions, where configured.
+4. Membership activation only after verified payment or authorized manual activation.
+5. Start dates, expiry dates, renewals, cancellations, and status changes.
+6. Discount and promotional codes.
+7. Membership eligibility for classes.
+8. Limits on included classes or training sessions.
+9. Day passes and free trials, if enabled.
+10. Booking capacity and cancellation rules.
+11. Waitlists and notifications, if enabled.
+12. Payment history and invoices or receipts.
+13. Refund tracking.
+14. Administrative overrides with audit logging.
+15. Email notifications for booking, cancellation, payment, and membership expiry.
+
+Use explicit states such as `pending`, `active`, `expired`, `cancelled`, and `past_due` where appropriate.
+
+Never activate a membership solely because the browser redirects to a success page.
+
+Avoid duplicate charges, duplicate bookings, inconsistent membership status, and race conditions.
+
+---
+
+## 5. IMAGE GENERATION AND ASSET REQUIREMENTS
+
+Use high-quality, relevant gym imagery throughout the website.
+
+If Splash AI image generation or a compatible image-generation integration is available, use it to generate original visual assets for the project.
+
+Create assets for:
+
+- Homepage hero.
+- Strength training.
+- Cardio area.
+- Group fitness.
+- Personal training.
+- Yoga and mobility.
+- Trainer portraits.
+- Facility interiors.
+- Fitness community.
+- Membership promotions.
+- Blog thumbnails.
+- Empty states or onboarding illustrations, where appropriate.
+
+### Image art direction
+
+Images should feel premium, energetic, authentic, and commercially usable.
+
+Use a mix of wide cinematic images, landscape cards, portrait trainer images, and square thumbnails. Keep image treatment consistent across the site.
+
+Avoid repetitive imagery, obvious visual artifacts, inappropriate anatomy, unrealistic equipment, distorted hands, unreadable text embedded in images, and unrelated stock photos.
+
+Do not rely on a single hero image repeated throughout the website.
+
+Use appropriate image cropping, aspect ratios, compression, responsive image sizes, and lazy loading for below-the-fold images.
+
+Provide meaningful alt text for informative images. Decorative images should use appropriate empty alt text.
+
+If Splash AI is unavailable, use a configurable supported image provider or properly licensed image assets. Provide graceful fallbacks if image generation fails. Never fabricate successful image generation or rely on broken image URLs.
+
+Use a custom SVG logo rather than embedding the logo in a photograph.
+
+---
+
+## 6. FRONTEND TECHNOLOGY AND IMPLEMENTATION
+
+Use a modern, maintainable stack:
+
+- Next.js with the App Router.
+- React.
+- TypeScript.
+- Tailwind CSS.
+- A consistent, accessible component library where useful.
+- React Hook Form and Zod for form validation where appropriate.
+- A reliable calendar/date-time component.
+- An icon library such as Lucide.
+- Proper image optimization.
+- Server components and client components used appropriately.
+
+Use the framework’s current stable, mutually compatible versions when implementing the project.
+
+Create a reusable component architecture for:
+
+- Header and mobile navigation.
+- Footer.
+- Buttons.
+- Forms.
+- Pricing cards.
+- Membership comparison.
+- Class cards.
+- Trainer cards.
+- Image galleries.
+- Modals and dialogs.
+- Notifications.
+- Booking calendar.
+- Pagination and filters.
+- Loading states.
+- Error states.
+- Empty states.
+- Admin tables.
+- Dashboard charts.
+
+Maintain a consistent design system for spacing, typography, colors, buttons, forms, and component states.
+
+Avoid monolithic components, duplicated layouts, unnecessary dependencies, and placeholder interactions.
+
+Every button, link, filter, tab, dropdown, form, and CTA must either perform its intended action or be clearly identified as unavailable until configured.
+
+---
+
+## 7. BACKEND, DATABASE, AND API
+
+Use Supabase with PostgreSQL as the preferred backend, unless the implementation environment provides a better-supported equivalent.
+
+Use secure server-side logic for sensitive actions.
+
+Design a normalized database schema with appropriate relationships and indexes.
+
+Suggested entities include:
+
+- `profiles`
+- `roles`
+- `branches`
+- `facilities`
+- `trainers`
+- `trainer_availability`
+- `classes`
+- `class_schedules`
+- `class_bookings`
+- `waitlist_entries`
+- `membership_plans`
+- `memberships`
+- `membership_benefits`
+- `training_packages`
+- `training_sessions`
+- `appointments`
+- `orders`
+- `payments`
+- `refunds`
+- `discount_codes`
+- `notifications`
+- `contact_submissions`
+- `newsletter_subscribers`
+- `articles`
+- `faqs`
+- `reviews`
+- `audit_logs`
+- `site_settings`
+
+Adapt this schema to avoid redundant data and preserve referential integrity.
+
+Implement:
+
+- Database migrations.
+- Seed data for demo content.
+- Server-side validation.
+- Authentication and authorization.
+- Row-level security policies.
+- Appropriate database constraints.
+- Secure file and image upload policies.
+- Rate limiting.
+- Pagination and filtering.
+- Transactional handling of bookings and payments where required.
+- Safe error handling.
+- Audit logging for sensitive administrative actions.
+
+Never expose service-role keys, payment secrets, or other private credentials in frontend code.
+
+Provide an `.env.example` file with variable names and descriptions, but no real credentials.
+
+If backend credentials are unavailable, implement the architecture and clearly document the configuration needed to activate the live features. Do not falsely claim that a live database or payment gateway is connected.
+
+---
+
+## 8. NAVIGATION AND INTERNAL LINKING
+
+All pages must be properly connected.
+
+Use a shared, consistent header and footer across the public website.
+
+Every navigation item must point to the correct route:
+
+- Home → `/`
+- About Us → `/about`
+- Facilities → `/facilities`
+- Classes → `/classes`
+- Personal Training → `/personal-training`
+- Trainers → `/trainers`
+- Memberships → `/membership`
+- Schedule → `/schedule`
+- Free Trial → `/free-trial`
+- Fitness Resources → `/fitness-resources`
+- FAQ → `/faq`
+- Contact → `/contact`
+- Login → `/login`
+- Join Now → `/membership` or the appropriate signup flow.
+
+Link all detail pages back to their parent pages and provide useful breadcrumbs.
+
+Connect service cards, class cards, trainer profiles, pricing cards, articles, forms, and dashboard actions to their correct destinations.
+
+Use proper active navigation states, working browser back/forward behavior, meaningful page titles, and a branded 404 page.
+
+No dead links, `href="#"` placeholders, or buttons that do nothing.
+
+Use semantic HTML and accessible navigation patterns.
+
+---
+
+## 9. SEO AND LOCAL DISCOVERABILITY
+
+Implement technical and on-page SEO throughout the project.
+
+Include:
+
+- Unique page titles and meta descriptions.
+- Clean, descriptive URLs.
+- Canonical URLs.
+- Open Graph metadata.
+- Social sharing metadata.
+- XML sitemap.
+- Robots.txt.
+- Breadcrumbs.
+- Image alt text.
+- Internal linking.
+- Proper heading hierarchy.
+- Relevant location-specific landing pages when the business genuinely serves those locations.
+- Structured data where appropriate, including `LocalBusiness` or a more specific supported subtype.
+- Accurate business name, address, phone, opening hours, and other verified details.
+- Google Search Console setup guidance.
+- Analytics integration with consent-aware configuration where required.
+
+Do not invent a gym address, business hours, customer reviews, or local rankings.
+
+Do not create doorway pages or duplicate location pages merely to target keywords.
+
+Validate structured data and provide instructions for testing it before launch.
+
+Reference Google's official LocalBusiness structured-data documentation:
+https://developers.google.com/search/docs/appearance/structured-data/local-business
+
+---
+
+## 10. SECURITY, PRIVACY, AND ACCESSIBILITY
+
+Follow secure development practices.
+
+Implement:
+
+- Server-side authorization for protected routes.
+- Input validation and output encoding.
+- Protection against common web vulnerabilities.
+- CSRF protection where applicable.
+- Rate limiting and abuse prevention.
+- Secure session and cookie configuration.
+- Safe authentication and password-reset flows.
+- Upload validation.
+- Payment webhook signature verification.
+- Least-privilege access.
+- Appropriate logging without leaking sensitive information.
+- Privacy-conscious analytics and consent management where applicable.
+
+Protect personal information, booking history, membership records, and fitness-related data.
+
+Apply relevant Indian privacy and consumer requirements, including applicable provisions of India's Digital Personal Data Protection framework, as well as other regional obligations when the website serves those jurisdictions. Confirm current applicability and requirements before launch.
+
+Aim for WCAG 2.2 AA accessibility practices, including:
+
+- Keyboard navigation.
+- Visible focus states.
+- Accessible forms and validation.
+- Sufficient contrast.
+- Screen-reader labels.
+- Reduced-motion support.
+- Accessible dialogs.
+- Responsive text sizing.
+- Proper semantic structure.
+
+---
+
+## 11. PERFORMANCE AND RESPONSIVE DESIGN
+
+The website must work smoothly on:
+
+- Mobile phones.
+- Tablets.
+- Laptops.
+- Desktop monitors.
+- Large displays.
+
+Optimize:
+
+- Core Web Vitals.
+- Largest Contentful Paint.
+- Cumulative Layout Shift.
+- Interaction to Next Paint.
+- Image delivery.
+- Font loading.
+- JavaScript bundles.
+- Database queries.
+- Caching.
+- Rendering strategy.
+
+Avoid oversized hero assets, layout shifts, unnecessary client-side JavaScript, and slow loading animations.
+
+Use skeletons or loading indicators when useful, plus graceful error and empty states.
+
+The site should remain visually polished even on slower mobile connections.
+
+---
+
+## 12. ADMIN CONTENT MANAGEMENT
+
+Make the most important business content editable without code changes.
+
+Authorized administrators should be able to update:
+
+- Logo and brand settings.
+- Hero text and images.
+- Facility descriptions.
+- Trainer profiles.
+- Class schedules.
+- Membership plans and prices.
+- Membership benefits.
+- Branch details.
+- Opening hours.
+- Promotions.
+- FAQs.
+- Articles.
+- Contact information.
+- Social links.
+- Policies.
+- Homepage sections.
+
+Validate updates, protect sensitive settings, and ensure changes appear on the public website where intended.
+
+Use realistic demo content to demonstrate these workflows, but clearly identify all fictional customers, testimonials, trainers, and transactions as demo data.
+
+---
+
+## 13. TESTING AND QUALITY ASSURANCE
+
+Before considering the website complete, run a systematic quality check.
+
+### Header and layout tests
+
+- Confirm desktop navigation remains on one horizontal line at supported desktop widths.
+- Confirm “About Us” and all other labels never wrap into multiple lines.
+- Confirm the logo, navigation, and CTA do not overlap.
+- Confirm the mobile menu opens, closes, and navigates correctly.
+- Confirm there is no unintended horizontal scrolling.
+- Confirm spacing, padding, margins, and alignment remain consistent.
+
+### Functional tests
+
+- Every navigation link opens the correct page.
+- Membership cards lead to the correct checkout or signup flow.
+- Registration, login, and password reset work.
+- Class booking respects capacity.
+- Duplicate bookings are prevented.
+- Booking cancellation follows the configured policy.
+- Payments are verified server-side.
+- Failed payments do not activate memberships.
+- Customer data remains private.
+- Admin-only pages are protected.
+- Forms show proper success and error states.
+- Images and routes do not produce broken links.
+- The site handles empty, loading, and error states correctly.
+
+### Technical tests
+
+- Run linting and TypeScript checks.
+- Run production builds.
+- Add unit and integration tests for critical logic.
+- Add end-to-end tests for major user journeys.
+- Check accessibility.
+- Check SEO metadata and structured data.
+- Review browser console and server logs.
+- Test responsive breakpoints.
+- Check database access policies.
+- Test payment webhooks in the provider's test environment.
+
+Fix issues before declaring the implementation complete. Clearly list any remaining external setup or configuration requirements.
+
+---
+
+## 14. REQUIRED DELIVERABLES
+
+Deliver the complete project with:
+
+1. All implemented public pages.
+2. Responsive layouts and the shared one-line desktop navigation.
+3. Custom SVG logo and visual design system.
+4. Generated or properly sourced image assets.
+5. Working internal routing and page links.
+6. Authentication and customer dashboard.
+7. Membership management.
+8. Class scheduling and booking.
+9. Checkout and payment-provider integration structure.
+10. Admin dashboard and content management.
+11. Database schema and migrations.
+12. Seed/demo data.
+13. Environment-variable example file.
+14. Form validation and error handling.
+15. SEO metadata and structured data.
+16. Testing setup and critical test cases.
+17. README with installation and deployment instructions.
+18. Instructions for configuring database, email, payment, image generation, and analytics providers.
+19. A concise list of any features requiring real credentials or business information before production launch.
+
+Do not claim that an external integration is live unless it has actually been configured and tested.
+
+---
+
+## 15. FINAL EXECUTION INSTRUCTIONS
+
+Work through the project in a logical order:
+
+1. Establish the brand and design system.
+2. Build the shared layout, header, navigation, and footer.
+3. Implement all public pages and detail routes.
+4. Implement authentication and customer dashboard.
+5. Build the database schema and backend logic.
+6. Implement membership, booking, and payment workflows.
+7. Build the admin dashboard.
+8. Integrate imagery and SEO.
+9. Test functionality, responsive behavior, accessibility, security, and performance.
+10. Fix the issues found during testing.
+11. Provide the complete source code and setup documentation.
+
+Prioritize functional correctness, excellent design, consistent spacing, clear navigation, and reliable business workflows.
+
+**NON-NEGOTIABLE FINAL RULE:** On desktop, the header navigation must remain in one clean horizontal row. “About Us,” “Personal Training,” “Membership Plans,” and every other navigation label must stay on one line. If the available width is insufficient, switch to a responsive menu at an appropriate breakpoint instead of allowing the desktop navigation to wrap. Test this requirement at multiple screen widths before delivery.
+
+Build this as a complete, polished, maintainable, client-ready fitness business website—not just a visual prototype.

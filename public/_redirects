@@ -1,0 +1,3 @@
+# Netlify Single-Page Application (SPA) routing rule
+# Redirects all incoming traffic to index.html with HTTP status 200 for client-side routing
+/*    /index.html   200
